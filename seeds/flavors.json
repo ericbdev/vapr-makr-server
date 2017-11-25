@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Acai Berry",
+    "manufacturer": 2
+  },
+  {
+    "id": 2,
+    "name": "Apple Pie",
+    "manufacturer": 1
+  },
+  {
+    "id": 3,
+    "name": "Bavarian Cream",
+    "manufacturer": 1
+  },
+  {
+    "id": 4,
+    "name": "Berry (Crunch) Cereal",
+    "manufacturer": 2
+  },
+  {
+    "id": 5,
+    "name": "Cake Batter Dip",
+    "manufacturer": 3
+  },
+  {
+    "id": 6,
+    "name": "Cheesecake",
+    "manufacturer": 2
+  },
+  {
+    "id": 7,
+    "name": "Crunchy (Captain) Cereal",
+    "manufacturer": 2
+  },
+  {
+    "id": 8,
+    "name": "DX Peanut Butter",
+    "manufacturer": 2
+  },
+  {
+    "id": 9,
+    "name": "DX Sweet Cream",
+    "manufacturer": 2
+  },
+  {
+    "id": 10,
+    "name": "French Vanilla II",
+    "manufacturer": 2
+  },
+  {
+    "id": 11,
+    "name": "Fruit Circles",
+    "manufacturer": 2
+  },
+  {
+    "id": 12,
+    "name": "Fruit Circles with Milk",
+    "manufacturer": 2
+  },
+  {
+    "id": 13,
+    "name": "Glazed Doughnut",
+    "manufacturer": 1
+  },
+  {
+    "id": 14,
+    "name": "Golden Butter",
+    "manufacturer": 1
+  },
+  {
+    "id": 15,
+    "name": "Graham Cracker v2",
+    "manufacturer": 1
+  },
+  {
+    "id": 16,
+    "name": "Lemon",
+    "manufacturer": 2
+  },
+  {
+    "id": 17,
+    "name": "Lemon Meringue Pie v2",
+    "manufacturer": 1
+  },
+  {
+    "id": 18,
+    "name": "Marshmallow",
+    "manufacturer": 3
+  },
+  {
+    "id": 19,
+    "name": "Strawberries and Cream",
+    "manufacturer": 2
+  },
+  {
+    "id": 20,
+    "name": "Strawberry (Ripe)",
+    "manufacturer": 2
+  },
+  {
+    "id": 21,
+    "name": "Vanilla Custard v2",
+    "manufacturer": 1
+  },
+  {
+    "id": 22,
+    "name": "Vanilla Swirl",
+    "manufacturer": 2
+  }
+]

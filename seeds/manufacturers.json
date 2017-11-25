@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "shortName": "CAP",
+    "longName": "Capella"
+  },
+  {
+    "id": 2,
+    "shortName": "TPA",
+    "longName": "The Perfumers/Flavor Apprentice"
+  },
+  {
+    "id": 3,
+    "shortName": "FW",
+    "longName": "Flavor West"
+  }
+]

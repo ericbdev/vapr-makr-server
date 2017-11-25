@@ -11,5 +11,5 @@ app.use('*', cors());
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.listen(PORT, () => console.log(
-  `GraphiQL is now running on http://localhost:${PORT}/graphiql`
+  `GraphiQL is now running on http://localhost:${PORT}/graphiql`,
 ));

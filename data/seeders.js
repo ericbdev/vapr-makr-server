@@ -4,9 +4,8 @@ import manufacturers from '../seeds/manufacturers.json';
 export const seedFlavors = (Model) => {
   flavors.forEach((item) => {
     Model.create({
-      id: item.id,
       name: item.name,
-      manufacturerId: item.manufacturer,
+      manufacturerId: item.manufacturerId,
     });
   });
 };
@@ -14,7 +13,7 @@ export const seedFlavors = (Model) => {
 export const seedManufacturers = (Model) => {
   manufacturers.forEach((item) => {
     Model.create({
-      id: item.id,
+      manufacturerId: item.manufacturerId,
       shortName: item.shortName,
       longName: item.longName,
     });

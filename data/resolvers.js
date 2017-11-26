@@ -25,7 +25,7 @@ const resolvers = {
       return Flavor
         .findAll({
           where: {
-            manufacturerId: args.id,
+            manufacturerId: args.manufacturerId,
           },
         })
         .then(flavor => flavor);

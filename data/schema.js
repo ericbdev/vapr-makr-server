@@ -19,6 +19,11 @@ const typeDefs = `
     name: String
     manufacturer: Manufacturer
   }
+  
+  type Mutation {
+    # A mutation to add a new channel to the list of channels
+    addFlavor(name: String!, manufacturerId: Int!): Flavor
+  }
 `;
 
 export default makeExecutableSchema({

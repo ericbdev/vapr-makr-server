@@ -54,8 +54,8 @@ const Manufacturer = db.models.manufacturer;
 const Flavor = db.models.flavor;
 
 db.sync({ force: true }).then(() => {
-  seedFlavors(FlavorModel);
-  seedManufacturers(ManufacturerModel);
+  seedFlavors(Flavor);
+  seedManufacturers(Manufacturer);
 });
 
 export { Flavor, Manufacturer };

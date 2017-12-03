@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 import { _ } from 'lodash';
 
-import {seedFlavors, seedManufacturers } from './seeders';
+import { seedFlavors, seedManufacturers } from './seeders';
 
 // See https://github.com/sequelize/sequelize/issues/8417 for more information about the `operatorsAliases` configuration
 const Op = Sequelize.Op;
@@ -13,25 +13,49 @@ const db = new Sequelize('database', null, null, {
 });
 
 const FlavorModel = db.define('flavor', {
-  id: { type: Sequelize.MEDIUMINT, primaryKey: true },
-  name: { type: Sequelize.STRING },
-  manufacturerId: { type: Sequelize.MEDIUMINT },
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  name: {
+    type: Sequelize.STRING(256),
+    allowNull: false,
+  },
+  manufacturerId: {
+    type: Sequelize.MEDIUMINT,
+    allowNull: true,
+  },
 });
 
-const ManufacturersModel = db.define('manufacturer', {
-  id: { type: Sequelize.MEDIUMINT, primaryKey: true },
-  shortName: { type: Sequelize.STRING },
-  longName: { type: Sequelize.STRING },
+const ManufacturerModel = db.define('manufacturer', {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  manufacturerId: {
+    type: Sequelize.MEDIUMINT,
+    allowNull: false,
+  },
+  shortName: {
+    type: Sequelize.STRING(10),
+    allowNull: false,
+  },
+  longName: {
+    type: Sequelize.STRING(256),
+    allowNull: false,
+  },
 });
 
-FlavorModel.hasOne(ManufacturersModel, { foreignKey: 'id' });
+FlavorModel.hasOne(ManufacturerModel, { foreignKey: 'id' });
 
 const Manufacturer = db.models.manufacturer;
 const Flavor = db.models.flavor;
 
 db.sync({ force: true }).then(() => {
-  seedFlavors(FlavorModel);
-  seedManufacturers(ManufacturersModel);
+  seedFlavors(Flavor);
+  seedManufacturers(Manufacturer);
 });
 
 export { Flavor, Manufacturer };

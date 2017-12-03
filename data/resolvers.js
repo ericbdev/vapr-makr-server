@@ -9,6 +9,16 @@ const resolvers = {
       return Manufacturer.findAll();
     },
   },
+  Mutation: {
+    addFlavor: (root, { input }) => {
+      return Flavor
+        .create({
+          name: input.name,
+          manufacturerId: input.manufacturerId,
+        })
+        .then(flavor => flavor);
+    },
+  },
   Flavor: {
     manufacturer(args) {
       return Manufacturer
@@ -25,7 +35,7 @@ const resolvers = {
       return Flavor
         .findAll({
           where: {
-            manufacturerId: args.id,
+            manufacturerId: args.manufacturerId,
           },
         })
         .then(flavor => flavor);

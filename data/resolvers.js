@@ -10,13 +10,13 @@ const resolvers = {
     },
   },
   Mutation: {
-    addFlavor: (root, args) => {
-      //TODO: Add validation?
-      return Flavor.create({
-        name: args.name,
-        manufacturerId: args.manufacturerId,
-      })
-      .then(flavor => flavor);
+    addFlavor: (root, { input }) => {
+      return Flavor
+        .create({
+          name: input.name,
+          manufacturerId: input.manufacturerId,
+        })
+        .then(flavor => flavor);
     },
   },
   Flavor: {

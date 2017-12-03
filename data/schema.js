@@ -2,6 +2,11 @@ import resolvers from './resolvers';
 import { makeExecutableSchema } from 'graphql-tools';
 
 const typeDefs = `
+  input FlavorInput {
+    name: String
+    manufacturerId: Int
+  }
+
   type Query {
     allFlavors: [Flavor]
     allManufacturers: [Manufacturer]
@@ -21,8 +26,8 @@ const typeDefs = `
   }
   
   type Mutation {
-    # A mutation to add a new channel to the list of channels
-    addFlavor(name: String!, manufacturerId: Int!): Flavor
+    # A mutation to add a new flavor to the list of flavors
+    addFlavor(input: FlavorInput): Flavor
   }
 `;
 

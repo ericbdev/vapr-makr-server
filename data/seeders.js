@@ -25,7 +25,7 @@ export const seedRecipes = (Model) => {
   recipes.forEach((item) => {
     Model.create({
       name: item.name,
-      resultAmount: item.resultAmount, 
+      resultAmount: item.resultAmount,
       resultStrength: item.resultStrength,
       resultVG: item.resultVG,
       resultPG: item.resultPG,

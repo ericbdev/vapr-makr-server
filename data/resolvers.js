@@ -1,12 +1,17 @@
-import { Flavor, Manufacturer } from './connectors';
+import GraphQLJSON from 'graphql-type-json';
+import { Flavor, Manufacturer, Recipe } from './connectors';
 
 const resolvers = {
+  JSON: GraphQLJSON,
   Query: {
     allFlavors() {
       return Flavor.findAll();
     },
     allManufacturers() {
       return Manufacturer.findAll();
+    },
+    allRecipes() {
+      return Recipe.findAll();
     },
   },
   Mutation: {

@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Franken Juice",
+    "resultAmount": 250,
+    "resultStrength": 3,
+    "resultVG": 75,
+    "resultPG": 25,
+    "nicStrength": 3,
+    "nicVG": 100,
+    "nicPG": 0,
+    "flavors": [
+      {
+        "flavor": 3,
+        "percentage": 2
+      },
+      {
+        "flavor": 4,
+        "percentage": 8
+      },
+      {
+        "flavor": 12,
+        "percentage": 2
+      },
+      {
+        "flavor": 18,
+        "percentage": 1
+      },
+      {
+        "flavor": 20,
+        "percentage": 5
+      },
+      {
+        "flavor": 21,
+        "percentage": 0.5
+      },
+      {
+        "flavor": 22,
+        "percentage": 0.5
+      }
+    ]
+  }
+]

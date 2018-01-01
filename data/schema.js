@@ -39,6 +39,7 @@ const typeDefs = `
     allFlavors: [Flavor]
     allManufacturers: [Manufacturer]
     allRecipes: [Recipe]
+    singleRecipe(id: ID!): Recipe
   }
 
   type Mutation {

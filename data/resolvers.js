@@ -18,6 +18,16 @@ const resolvers = {
         ],
       });
     },
+    singleRecipe: (root, { id }) => {
+      const recipeId = parseInt(id, 10);
+      return Recipe
+        .findOne({
+          where: {
+            id: recipeId,
+          },
+        })
+        .then(recipe => recipe);
+    },
   },
   Mutation: {
     addFlavor: (root, { input }) => {

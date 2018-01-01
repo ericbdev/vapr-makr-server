@@ -11,7 +11,12 @@ const resolvers = {
       return Manufacturer.findAll();
     },
     allRecipes() {
-      return Recipe.findAll();
+      return Recipe.findAll({
+        attributes: [
+          'id',
+          'name',
+        ],
+      });
     },
   },
   Mutation: {

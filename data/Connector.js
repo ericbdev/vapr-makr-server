@@ -16,7 +16,7 @@ class Connector {
   _init() {
     this.db = new Sequelize('database', null, null, {
       dialect: 'sqlite',
-      storage: './vapr-makr-test.sqlite',
+      storage: './vapr-makr.sqlite',
       operatorsAliases: this.op,
     });
 

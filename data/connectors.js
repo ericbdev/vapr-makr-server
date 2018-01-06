@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 import { _ } from 'lodash';
 
-import { seedFlavors, seedManufacturers, seedRecipes } from './seeders';
+import { seedFlavors, seedManufacturers, seedRecipes } from './seeders-old';
 
 // See https://github.com/sequelize/sequelize/issues/8417 for more information about the `operatorsAliases` configuration
 const Op = Sequelize.Op;

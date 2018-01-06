@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize';
 
 import { Flavors, Manufacturers, Recipes } from './models';
+import { FlavorsSeeder, ManufacturersSeeder, RecipesSeeder } from './seeders';
 
 class Connector {
   constructor() {
@@ -30,14 +31,9 @@ class Connector {
 
   _sync() {
     this.db.sync({ force: true }).then(() => {
-      /**
-       *
-       * seedFlavors(Flavor);
-       * seedManufacturers(Manufacturer);
-       * seedRecipes(Recipe);
-       */
-
-      console.log('new db made!');
+      new FlavorsSeeder(this);
+      new ManufacturersSeeder(this);
+      new RecipesSeeder(this);
     });
   }
 }

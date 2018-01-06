@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Franken Juice",
+    "resultAmount": 100,
+    "resultStrength": 2,
+    "resultVG": 75,
+    "resultPG": 25,
+    "nicStrength": 72,
+    "nicVG": 20,
+    "nicPG": 80,
+    "flavors": [
+      {
+        "flavor": 3,
+        "percent": 2
+      },
+      {
+        "flavor": 4,
+        "percent": 8
+      },
+      {
+        "flavor": 12,
+        "percent": 2
+      },
+      {
+        "flavor": 18,
+        "percent": 1
+      },
+      {
+        "flavor": 20,
+        "percent": 5
+      },
+      {
+        "flavor": 21,
+        "percent": 0.5
+      },
+      {
+        "flavor": 22,
+        "percent": 0.5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Cosmic Fog Milk and Honey (Clone)",
+    "resultAmount": 100,
+    "resultStrength": 2,
+    "resultVG": 75,
+    "resultPG": 25,
+    "nicStrength": 72,
+    "nicVG": 100,
+    "nicPG": 0,
+    "flavors": [
+      {
+        "flavor": 8,
+        "percent": 1.5
+      },
+      {
+        "flavor": 10,
+        "percent": 2
+      },
+      {
+        "flavor": 15,
+        "percent": 5
+      },
+      {
+        "flavor": 18,
+        "percent": 5
+      }
+    ]
+  }
+]

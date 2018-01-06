@@ -1,5 +1,8 @@
 import GraphQLJSON from 'graphql-type-json';
 import { Flavor, Manufacturer, Recipe } from './connectors';
+import Connector from './Connector.js';
+
+new Connector();
 
 const resolvers = {
   JSON: GraphQLJSON,

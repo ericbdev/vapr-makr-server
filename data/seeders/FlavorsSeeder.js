@@ -1,4 +1,4 @@
-import { flavors } from '../../seeds/';
+import { flavors } from './seeds/';
 
 export default class FlavorsSeeder {
   constructor(connector) {

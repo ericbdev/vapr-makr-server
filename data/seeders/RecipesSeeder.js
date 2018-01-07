@@ -1,4 +1,4 @@
-import { recipes } from '../../seeds/';
+import { recipes } from './seeds/';
 
 export default class RecipesSeeder {
   constructor(connector) {

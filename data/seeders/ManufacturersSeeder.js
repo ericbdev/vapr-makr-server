@@ -1,4 +1,4 @@
-import { manufacturers } from '../../seeds/';
+import { manufacturers } from './seeds/';
 
 export default class ManufacturersSeeder {
   constructor(connector) {

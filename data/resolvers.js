@@ -20,11 +20,46 @@ const resolvers = {
         ],
       });
     },
-    singleRecipe: (root, { id }) => {
-      return connector.models.recipes.findOne({
+    recipeItems: (root, { id }) => {
+      return connector.models.recipeItems.findAll({
         where: {
           id: parseInt(id, 10),
         },
+        include: [
+          {
+            model: connector.models.manufacturers,
+            as: 'manufacturer',
+            attributes: [
+              'shortName',
+              'longName',
+              'manufacturerId',
+            ],
+          },
+        ],
+      });
+    },
+    singleRecipe: (root, { id }) => {
+      const recipeId = parseInt(id, 10);
+      return connector.models.recipes.findOne({
+        required: false,
+        where: {
+          id: recipeId,
+        },
+        include: [
+          {
+            model: connector.models.recipeItems,
+            as: 'recipeItems',
+            attributes: [
+              'id',
+              'recipeId',
+              'flavorId',
+              'percent',
+            ],
+            where: {
+              recipeId,
+            },
+          },
+        ],
       }).then(recipe => recipe);
     },
   },
@@ -50,6 +85,15 @@ const resolvers = {
       return connector.models.flavors.findAll({
         where: {
           manufacturerId: args.manufacturerId,
+        },
+      }).then(flavor => flavor);
+    },
+  },
+  RecipeItem: {
+    flavor(args) {
+      return connector.models.flavors.findOne({
+        where: {
+          id: args.flavorId,
         },
       }).then(flavor => flavor);
     },

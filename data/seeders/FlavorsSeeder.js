@@ -1,4 +1,4 @@
-import { flavors } from '../../seeds/';
+import { flavors } from './seeds/';
 
 export default class FlavorsSeeder {
   constructor(connector) {
@@ -6,6 +6,7 @@ export default class FlavorsSeeder {
 
     flavors.forEach((item) => {
       this.connector.models.flavors.create({
+        flavorId: item.id,
         name: item.name,
         manufacturerId: item.manufacturerId,
       });

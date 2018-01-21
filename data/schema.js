@@ -11,6 +11,7 @@ const typeDefs = `
 
   type Manufacturer {
     id: Int
+    manufacturerId: Int
     shortName: String
     longName: String
     flavors: [Flavor]
@@ -18,8 +19,16 @@ const typeDefs = `
 
   type Flavor {
     id: Int
+    flavorId: Int
     name: String
     manufacturer: Manufacturer
+  }
+  
+  type RecipeItem {
+    id: Int
+    recipeId: Int
+    flavor: Flavor
+    percent: Float
   }
 
   type Recipe {
@@ -32,7 +41,7 @@ const typeDefs = `
     nicStrength: Int
     nicVG: Int
     nicPG: Int
-    flavors: JSON
+    recipeItems: [RecipeItem]
   }
 
   type Query {
@@ -40,6 +49,7 @@ const typeDefs = `
     allManufacturers: [Manufacturer]
     allRecipes: [Recipe]
     singleRecipe(id: ID!): Recipe
+    recipeItems(id: ID!): [RecipeItem]
   }
 
   type Mutation {

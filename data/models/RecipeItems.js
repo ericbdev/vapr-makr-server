@@ -1,28 +1,28 @@
 import ModelBase from './ModelBase';
 
-export default class Flavors extends ModelBase {
+export default class RecipeItems extends ModelBase {
   constructor(connector) {
     super(connector);
 
     return this.define({
-      modelName: 'flavors',
+      modelName: 'recipeItems',
       attributes: {
         id: {
           type: this.sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true,
         },
+        recipeId: {
+          type: this.sequelize.INTEGER,
+          allowNull: false,
+        },
         flavorId: {
-          type: this.sequelize.MEDIUMINT,
+          type: this.sequelize.INTEGER,
           allowNull: false,
         },
-        name: {
-          type: this.sequelize.STRING(256),
+        percent: {
+          type: this.sequelize.INTEGER,
           allowNull: false,
-        },
-        manufacturerId: {
-          type: this.sequelize.MEDIUMINT,
-          allowNull: true,
         },
       },
     });

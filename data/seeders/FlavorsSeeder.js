@@ -6,6 +6,7 @@ export default class FlavorsSeeder {
 
     flavors.forEach((item) => {
       this.connector.models.flavors.create({
+        flavorId: item.id,
         name: item.name,
         manufacturerId: item.manufacturerId,
       });
